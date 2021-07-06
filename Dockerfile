@@ -1,8 +1,5 @@
-FROM alpine:3.14
-#RUN apk add --no-cache nodejs yarn
-RUN apk add --no-cache ruby
-RUN gem install asciidoctor-pdf
-RUN gem install asciidoctor-diagram
+FROM asciidoctor/docker-asciidoctor:1.7
 COPY ./entrypoint.sh / 
+COPY ./theme /theme
 WORKDIR /src/
 ENTRYPOINT ["/entrypoint.sh"]

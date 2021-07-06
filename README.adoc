@@ -1,24 +1,35 @@
 = ascidoc2pdf: Konvertiert Asciidoc nach PDF in gematik Template
+Systems Engineering
+v0.0.1, 2021-07-06
+// gematik settings
+:version: 0.0.1
 :source-highlighter: rouge
+:title-page:
+:sectnums:
+:toc:
+:toclevels: 3
+:gem-classification: öffentlich
+:toc-title: Inhaltsverzeichnis
+
 
 == Ausführen über Docker Compose
 [source,bash]
 ----
 docker compose build
-docker compose run --rm asciidoc2pdf \-D build README.adoc
+docker compose run --rm asciidoc2pdf README.adoc
 
 #asciidoctor-pdf -a pdf-theme=./theme/gematik-theme.yml -r asciidoctor-diagram  -a pdf-fontsdir=./theme/fonts/ README.adoc;open README.pdf
 ----
 
 == Dokumentenstruktur
 
-[source,asciidoc]
+[source,asciidoctor]
 ----
 = Telematikinfrastruktur: Konzept der Gesamtarchitektur <1>
-Dan Allen <https://github.com/mojavelinux[@mojavelinux]>; Sarah White <https://github.com/graphitefriction[@graphitefriction]>
-v1.5.4, 2021-01-09
+Systems Enginneing <2>
+v1.5.4, 2021-01-09 <3>
 // gematik settings
-:source-highlighter: rouge <2>
+:source-highlighter: rouge <4>
 :title-page:
 :sectnums:
 :toc:
@@ -27,4 +38,48 @@ v1.5.4, 2021-01-09
 :toc-title: Inhaltsverzeichnis
 ----
 <1> Titel: Untertitel
-<2> Benutze `rouge` Plug-In für Syntax-Highlight
+<2> Erste Zeile nach dem Titel: Autor
+<3> Zweite Zeile nach dem Titel: Version, Datum
+<4> Benutze `rouge` Plug-In für Syntax-Highlight
+
+=== PlantUML Diagramme
+
+[plantuml, diagram-classes, png]     
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
+=== Quellcode
+
+.Quellcode mit Zeilennummern und Zeilein-Highlight
+[source,ruby,linenums,highlight=2..5]
+----
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I',
+}
+----
+
+=== Tabellen
+
+[frame=ends]
+|===
+|Column 1, header row |Column 2, header row
+
+.2+|This cell spans rows 2 and 3 because its specifier contains a span of `.2+`
+|Cell in column 2, row 2
+
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|===

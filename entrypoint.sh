@@ -1,3 +1,9 @@
 #!/bin/sh
-gem list --local
-asciidoctor-pdf -r asciidoctor-diagram --trace "$@"
+asciidoctor-pdf \
+    --destination-dir /src/build/ \
+    --trace \
+    -r asciidoctor-diagram \
+    -a pdf-theme=./theme/gematik-theme.yml \
+    -a pdf-fontsdir=/theme/fonts/ \
+    "$@"
+
