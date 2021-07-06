@@ -1,0 +1,19 @@
+= ascidoc2pdf: Konvertiert Asciidoc nach PDF in gematik Template
+:source-highlighter: rouge
+
+== Ausführen über Docker Compose
+[source,bash]
+----
+docker compose build
+docker compose run --rm asciidoc2pdf \-D build README.adoc
+----
+
+== Dokumentenstruktur
+
+[source,asciidoc]
+----
+= Telematikinfrastruktur: Konzept der Gesamtarchitektur <1>
+:source-highlighter: rouge <2>
+----
+<1> Titel: Untertitel
+<2> Benutze `rouge` Plug-In für Syntax-Highlight
