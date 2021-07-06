@@ -6,6 +6,8 @@
 ----
 docker compose build
 docker compose run --rm asciidoc2pdf \-D build README.adoc
+
+#asciidoctor-pdf -a pdf-theme=./theme/gematik-theme.yml -r asciidoctor-diagram  -a pdf-fontsdir=./theme/fonts/ README.adoc;open README.pdf
 ----
 
 == Dokumentenstruktur
