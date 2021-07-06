@@ -15,7 +15,16 @@ docker compose run --rm asciidoc2pdf \-D build README.adoc
 [source,asciidoc]
 ----
 = Telematikinfrastruktur: Konzept der Gesamtarchitektur <1>
+Dan Allen <https://github.com/mojavelinux[@mojavelinux]>; Sarah White <https://github.com/graphitefriction[@graphitefriction]>
+v1.5.4, 2021-01-09
+// gematik settings
 :source-highlighter: rouge <2>
+:title-page:
+:sectnums:
+:toc:
+:toclevels: 3
+:gem-classification: öffentlich
+:toc-title: Inhaltsverzeichnis
 ----
 <1> Titel: Untertitel
 <2> Benutze `rouge` Plug-In für Syntax-Highlight
