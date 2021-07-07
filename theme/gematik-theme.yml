@@ -16,7 +16,7 @@ page:
   background_color: FFFFFF
   layout: portrait
   initial_zoom: FitH
-  margin: [3.38cm, 2.48cm, 1cm, 3cm]
+  margin: [3.38cm, 2.48cm, 2cm, 3cm]
   # margin_inner and margin_outer keys are used for recto/verso print margins when media=prepress
   #margin_inner: 0.75in
   #margin_outer: 0.59in
