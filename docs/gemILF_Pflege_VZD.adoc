@@ -10,3 +10,5 @@ v1.6.0, 2022-06-17
 :toclevels: 3
 :gem-classification: öffentlich
 :toc-title: Inhaltsverzeichnis
+
+== {version}
