@@ -1,0 +1,12 @@
+= Implementierungsleitfaden
+Systems Engineering
+v1.6.0, 2022-06-17
+// gematik settings
+:version: 1.6.0
+:source-highlighter: rouge
+:title-page:
+:sectnums:
+:toc:
+:toclevels: 3
+:gem-classification: öffentlich
+:toc-title: Inhaltsverzeichnis
