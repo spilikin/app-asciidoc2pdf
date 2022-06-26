@@ -1,7 +1,7 @@
 #!/bin/sh
 echo $1
 asciidoctor-pdf \
-    --destination-dir /src/build/ \
+    --destination-dir ./pdf/ \
     --trace \
     -r asciidoctor-diagram \
     -a pdf-theme=/theme/gematik-theme.yml \
