@@ -1,4 +1,5 @@
 #!/bin/sh
+echo $1
 asciidoctor-pdf \
     --destination-dir /src/build/ \
     --trace \

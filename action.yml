@@ -1,0 +1,16 @@
+# action.yml
+name: 'gematik AsciiDoc2PDF'
+description: 'Creates PDF Documents from the AsciiDoc using gematik layout'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}

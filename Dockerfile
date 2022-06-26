@@ -1,4 +1,4 @@
-FROM asciidoctor/docker-asciidoctor:1.7
+FROM asciidoctor/docker-asciidoctor:1.22
 COPY ./entrypoint.sh / 
 COPY ./theme /theme
 WORKDIR /src/
